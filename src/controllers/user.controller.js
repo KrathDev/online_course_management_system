@@ -54,7 +54,21 @@ const login = async (req, res) => {
   }
 }
 
+const getProfile = async (req, res) => {
+  try {
+    const user = await userService.getUserById(req.user.userId)
+    if (!user) {
+      return res.status(404).json({ message: 'Người dùng không tồn tại' })
+    }
+
+    res.status(200).json(user)
+  } catch (error) {
+    return res.status(500).json({ message: 'Internal server error' })
+  }
+}
+
 module.exports = {
   register,
-  login
+  login,
+  getProfile
 }

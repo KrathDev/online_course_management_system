@@ -9,7 +9,12 @@ const getUserByEmail = async (email) => {
   return await User.findOne({ email })
 }
 
+const getUserById = async (userId) => {
+  return await User.findById(userId).select('-password')
+}
+
 module.exports = {
   createUser,
-  getUserByEmail
+  getUserByEmail,
+  getUserById
 }
