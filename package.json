@@ -1,0 +1,23 @@
+{
+  "name": "online_course_management_system",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.14.0",
+    "prettier": "^3.5.3"
+  }
+}
