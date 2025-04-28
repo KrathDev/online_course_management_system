@@ -11,7 +11,8 @@ database.connect()
 app.use(express.json())
 
 //Routes
-app.use('/api/v1/users', require('./routes/user.route'))
+app.use('/api/users', require('./routes/user.route'))
+app.use('/api/courses', require('./routes/course.route'))
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
